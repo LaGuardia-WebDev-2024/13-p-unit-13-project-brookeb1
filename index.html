@@ -21,50 +21,53 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1>Quiz About Me!</h1>
     <hr />
     <!-- Movie Question -->
-    <form id="movie-form">
+    <form id="cat-form">
       <label>
-        🎥 What is my favorite movie?
-        <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+        What are my cats names?
+        <select id="cat-answer">
+          <option value="name1">pumpkin and cinnamon</option>
+          <option value="name2">Kevin and Luna</option>
+          <option value="name3">Stormy and Rosie</option>
+          <option value="name4">Star and Fish</option>
         </select>
       </label>
-      <button type="submit">Check Movie Answer</button>
+      <button type="submit">Check cat Answer</button>
     </form>
-    <div id="movie-result"></div>
+    <div id="cat-result"></div>
     <hr />
     <!-- Book Question -->
     <form id="book-form">
       <label>
-        📖 What is my favorite book?
+        What is my favorite book?
         <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+          <option value="book1">Pride and Predjudice</option>
+          <option value="book2">Circe</option>
+          <option value="book3">Little Women</option>
+          <option value="book4">The Witch's Heart</option>
         </select>
       </label>
       <button type="submit">Check Book Answer</button>
     </form>
     <div id="book-result"></div>
+    <img id="cat1" src="https://i.redd.it/found-my-girl-back-in-2017-outside-of-my-work-mother-was-a-v0-rdhh8i0v6gca1.jpg?width=4032&format=pjpg&auto=webp&s=04fc67ed460839aaaf14c34d033699ffa9abc22f" width="210">
+    <img id="cat2" src="https://consumer-cms.petfinder.com/sites/default/files/images/content/Domestic%20Longhair%20Cat%203.jpg" width="210">
+    <img id="books" src="https://bdc2020.o0bc.com/wp-content/uploads/2021/12/AdobeStock_242762094-61b2260261960-scaled.jpeg" width="210">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       //Movie Question jQuery Code
-      $("#movie-form").on("submit", function (event) {
+      $("#cat-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#movie-answer");
+        var $answer = $("#cat-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
-          $("#movie-result").text("YESSSS!");
+        if (answer === "name3") {
+          $("#cat-result").text("YESSSS!");
         } else {
-          $("#movie-result").text("Try Again!");
+          $("#cat-result").text("Try Again!");
         }
       });
 
@@ -75,13 +78,18 @@ Select ONE Additional Feature to Add
         var $answer = $("#book-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
+        if (answer === "book3") {
           $("#book-result").text("YESSSS!");
         } else {
           $("#book-result").text("Try Again!");
         }
       });
+      
+      $("#cat1").animate({marginLeft: "30px",})
     </script>
+    
+  
+         
   </body>
 
   <!--- Taken From Khan Academy HTML/JS: Making webpages interactive with jQuery-->
