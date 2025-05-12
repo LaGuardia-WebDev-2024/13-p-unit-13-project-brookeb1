@@ -9,7 +9,7 @@ Select ONE Additional Feature to Add
 [ no ] Feature 1 - Google Font
 [ no ] Feature 2 - Upload a Font
 [ no ] Feature 3 - .mouseover() Method
-[ no ] Feature 4 - :hover Feature 
+[ yes ] Feature 4 - :hover Feature 
 [ no ] Feature 5 - Add an Additional Interactive Drop-down
 -->
 
@@ -20,6 +20,13 @@ Select ONE Additional Feature to Add
     <title>Unit 13 Project</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
+  <style> h1:hover {
+background-color: black
+}
+h2:hover {
+background-color: black;
+}
+</style>
   <body>
     <h1>Quiz About Me!</h1>
     <hr />
@@ -52,8 +59,14 @@ Select ONE Additional Feature to Add
       <button type="submit">Check Book Answer</button>
     </form>
     <div id="book-result"></div>
+    <h1 id="cath1">
+      Cats
+    </h1>
+    <h2>
+      What are their names?
+    </h2>
     <img id="cat1" src="https://i.redd.it/found-my-girl-back-in-2017-outside-of-my-work-mother-was-a-v0-rdhh8i0v6gca1.jpg?width=4032&format=pjpg&auto=webp&s=04fc67ed460839aaaf14c34d033699ffa9abc22f" width="210">
-    <img id="cat2" src="https://consumer-cms.petfinder.com/sites/default/files/images/content/Domestic%20Longhair%20Cat%203.jpg" width="210">
+    <img id="cat2" style= "display: none" src="https://consumer-cms.petfinder.com/sites/default/files/images/content/Domestic%20Longhair%20Cat%203.jpg" width="210">
     <img id="books" src="https://bdc2020.o0bc.com/wp-content/uploads/2021/12/AdobeStock_242762094-61b2260261960-scaled.jpeg" width="210">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
@@ -85,7 +98,8 @@ Select ONE Additional Feature to Add
         }
       });
       
-      $("#cat1").animate({marginLeft: "30px",})
+      $("#cat1").animate({width:"250", marginLeft: "30px", borderWidth: "20px",}, 2500);
+     $("#cat2").slideDown(10000, function(){$("#cath1").slideDown(3000);});
     </script>
     
   
